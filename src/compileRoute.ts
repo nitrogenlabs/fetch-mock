@@ -9,7 +9,6 @@ export interface RouteType {
 }
 
 const normalizeRequest = (url, options) => {
-  const {Request} = fetch;
   if(Request.prototype.isPrototypeOf(url)) {
     return {
       url: url.url,
@@ -70,10 +69,9 @@ const getHeaderMatcher = (options: any) => {
 
   return (route: RouteType) => {
     const {headers = {}} = route;
-    let updatedHeaders: any;
-    const {Headers} = fetch;
+    let updatedHeaders: any = {};
 
-    if(headers instanceof Headers) {
+    if(headers instanceof fetch.Headers) {
       // node-fetch 1 Headers
       if(typeof headers.raw === 'function') {
         updatedHeaders = Object.entries(headers.raw());

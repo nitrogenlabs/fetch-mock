@@ -1,7 +1,8 @@
 import http from 'http';
-import {FetchMockConfig} from 'index';
-import isEmpty from 'lodash/isEmpty';
-import isPlainObject from 'lodash/isPlainObject';
+import isEmpty from 'lodash/fp/isEmpty';
+import isPlainObject from 'lodash/fp/isPlainObject';
+
+import {FetchMockConfig} from './FetchMock';
 
 export interface FetchMockResponseOptions {
   readonly headers: any;

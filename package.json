@@ -4,9 +4,11 @@
   "description": "Mock http requests made using fetch.",
   "main": "dist/index.js",
   "scripts": {
+    "clean": "rm -rf ./dist",
+    "compile": "yarn clean && lex compile -t",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "test": "lex test -t",
-    "prepublishOnly": "lex compile -t",
+    "prepublishOnly": "yarn test && yarn compile",
     "reset": "rm -rf node_modules yarn.lock package-lock.json && yarn",
     "update": "yarn upgrade-interactive --latest"
   },
