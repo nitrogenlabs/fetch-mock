@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "eslint-config-styleguidejs/typescript"
+  ],
+  "rules": {
+    "no-await-in-loop": "off"
+  }
+}

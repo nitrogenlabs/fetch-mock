@@ -1,7 +1,6 @@
-/es5/
 /node_modules/
 npm-debug.log
+/coverage/
 /dist/
-coverage/
-/test/fixtures/built-sw.js
-.nyc_output
+/node_modules/
+
