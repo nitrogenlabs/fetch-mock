@@ -1,4 +1,4 @@
-import isEmpty from 'lodash/fp/isEmpty';
+import isEmpty from 'lodash/isEmpty';
 
 import {compileRoute} from './compileRoute';
 import {ResponseBuilder} from './responseBuilder';
